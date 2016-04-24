@@ -1,0 +1,63 @@
+*{}
+#searchfield{width: 250px; height: 35px;}
+/* Вид неактивного поля   */
+.sf_inactive{
+	border:1px #aaa solid;
+	background-color:#fff;
+	color:#b4d3db;
+}
+/* Этот стиль включается когда на поле наводишь мышкой  */
+.sf_active{
+	border:1px #555 solid;
+	background-color:#fff;
+	color:#333;
+}
+/* Этот стиль включается когда в поле введен запрос и нажимается кнопка поиск */
+.sf_text{
+	border:1px #222 solid;
+	background-color:#fff;
+	color:#888;
+}
+
+/* suggestions box */
+/* js code generates unordered list */
+.sf_suggestion{
+	position:relative;
+}
+/* Это стиль выползающего блока */
+.sf_suggestion ul{
+	min-width:187px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size:14px;
+    border:1px #d9d9d9 solid;
+	position: absolute;
+	margin:0;
+	padding:0;
+	background:#FFF;
+	top:0;
+	left:0;
+	z-index:101;
+	box-sizing:content-box;
+	max-height:155px;
+	overflow-y:auto;
+}
+/* Стиль появляющегося списка */
+.sf_suggestion li{
+	margin:0;
+	padding:0;
+	list-style:none;
+	z-index:101;
+}
+/* Стиль сылок в блоке */
+.sf_suggestion li a{
+	display:block;
+	padding:5px;
+	color:#444;
+	text-decoration:none;
+	min-width:170px;
+	background-color:#FFFFFF;
+	z-index:101;
+}
+/* Стиль при выборе одного из пунктов */
+.sf_suggestion li.selected a{
+	background:#ccc;
+}

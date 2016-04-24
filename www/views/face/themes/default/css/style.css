@@ -1,0 +1,2583 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+input,
+button {
+  outline: none;
+}
+
+@font-face {
+  font-family: 'Helios';
+
+  src: url('fonts/Helios.eot');
+  src: url('fonts/Helios.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Helios.woff2') format('woff2'),
+         url('fonts/Helios.woff') format('woff'),
+         url('fonts/Helios.ttf') format('truetype'),
+         url('fonts/Helios.svg#Helios') format('svg');
+}
+
+@font-face {
+  font-family: 'BebasNeueBook';
+
+  src: url('fonts/BebasNeueBook.eot');
+  src: url('fonts/BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeueBook.woff2') format('woff2'),
+         url('fonts/BebasNeueBook.woff') format('woff'),
+         url('fonts/BebasNeueBook.ttf') format('truetype'),
+         url('fonts/BebasNeueBook.svg#BebasNeueBook') format('svg');
+}
+
+@font-face {
+  font-family: 'BebasNeueRegular';
+
+  src: url('fonts/BebasNeueRegular.eot');
+  src: url('fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeueRegular.woff2') format('woff2'),
+         url('fonts/BebasNeueRegular.woff') format('woff'),
+         url('fonts/BebasNeueRegular.ttf') format('truetype'),
+         url('fonts/BebasNeueRegular.svg#BebasNeueRegular') format('svg');
+}
+
+@font-face {
+  font-family: 'BebasNeueBold';
+
+  src: url('fonts/BebasNeueBold.eot');
+  src: url('fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeueBold.woff2') format('woff2'),
+         url('fonts/BebasNeueBold.woff') format('woff'),
+         url('fonts/BebasNeueBold.ttf') format('truetype'),
+         url('fonts/BebasNeueBold.svg#BebasNeueBold') format('svg');
+}
+
+header,
+footer,
+article,
+section,
+figure,
+nav,
+img {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+
+  border: none;
+}
+
+a>img {
+  border: none;
+}
+
+html,
+body {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  color: #000;
+
+  font: 10px/15px Arial, Helvetica, sans-serif;
+}
+
+.body {
+  position: relative;
+
+  width: 100%;
+  height: auto !important;
+  min-height: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  letter-spacing: 0.5px;
+
+  color: #303030;
+
+  font: normal 30px/36px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Page_Wrap {
+  width: 100%;
+  padding-bottom: 230px;
+}
+
+.cols {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 10px;
+  padding: 0 6px;
+
+  vertical-align: top;
+}
+
+.cols.col-1,
+.cols.col-2,
+.cols.col-3,
+.cols.col-4,
+.cols.col-5,
+.cols.col-6,
+.cols.col-7,
+.cols.col-8,
+.cols.col-9,
+.cols.col-10,
+.cols.col-11,
+.cols.col-12 {
+  width: 100%;
+}
+
+.body:before,
+.body:after,
+.row:before,
+.row:after,
+.clear:before,
+.clear:after {
+  display: table;
+
+  content: " ";
+}
+
+.body:after,
+.row:after,
+.clear:after {
+  clear: both;
+}
+
+.row {
+  position: relative;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.colss {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0 0 10px;
+  padding: 0 6px;
+
+  vertical-align: top;
+}
+
+.body .colss.col-1,
+.body .colss.col-2,
+.body .colss.col-3,
+.body .colss.col-4,
+.body .colss.col-5,
+.body .colss.col-6,
+.body .colss.col-7,
+.body .colss.col-8,
+.body .colss.col-9,
+.body .colss.col-10,
+.body .colss.col-11,
+.body .colss.col-12 {
+  position: relative;
+}
+
+.body .colss.col-1 {
+  width: 85,33333333333333px;
+}
+
+.body .colss.col-2 {
+  width: 170,6666666666667px;
+}
+
+.body .colss.col-3 {
+  width: 256px;
+}
+
+.body .colss.col-4 {
+  width: 341,3333333333333px;
+}
+
+.body .colss.col-5 {
+  width: 426,6666666666667px;
+}
+
+.body .colss.col-6 {
+  width: 512px;
+}
+
+.body .colss.col-7 {
+  width: 597,3333333333333px;
+}
+
+.body .colss.col-8 {
+  width: 682,6666666666666px;
+}
+
+.body .colss.col-9 {
+  width: 768px;
+}
+
+.body .colss.col-10 {
+  width: 853,3333333333333px;
+}
+
+.body .colss.col-11 {
+  width: 938,6666666666666px;
+}
+
+.body .colss.col-12 {
+  width: 1024px;
+}
+
+.Content {
+  overflow: hidden;
+
+  width: 100%;
+  margin: 0 auto;
+
+  background: #FFF;
+}
+
+.row_wrap {
+  position: relative;
+
+  width: 100%;
+  min-width: 320px;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*=== ГЛАВНОЕ МЕНЮ ===*/
+
+.top {
+  margin-bottom: 100px;
+
+  border-bottom: #d9d9d9 1px solid;
+  background: #f5f5f5;
+}
+
+.top .cols {
+  margin-bottom: 0;
+}
+
+#callMMenu {
+  position: relative;
+  top: 0px;
+
+  display: block;
+  float: left;
+  overflow: hidden;
+
+  width: 36px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+
+  font-size: 0;
+}
+
+#callMMenu span {
+  position: absolute;
+  top: 18.5px;
+  right: 5px;
+  left: 5px;
+
+  display: block;
+
+  height: 3px;
+
+  border-radius: 2px;
+  background: #505050;
+}
+
+#callMMenu span::before,
+#callMMenu span::after {
+  position: absolute;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 3px;
+
+  content: "";
+
+  border-radius: 2px;
+  background: #505050;
+}
+
+#callMMenu span::before {
+  top: -7px;
+}
+
+#callMMenu span::after {
+  bottom: -7px;
+}
+
+.top ul {
+  margin: 0;
+}
+
+.main_menu {
+  display: none;
+  float: left;
+}
+
+ul.log_in {
+  float: right;
+}
+
+.top li {
+  display: inline-block;
+
+  margin-right: 10px;
+
+  list-style: none;
+}
+
+.top li:last-child {
+  margin-right: 0;
+}
+
+.top li a {
+  display: inline-block;
+
+  height: 40px;
+  padding: 0px;
+
+  text-decoration: none;
+
+  color: #505050;
+
+  font: 18px/40px 'BebasNeueBook', Arial, Helvetica, sans-serif;
+}
+
+.top li a:hover,
+.top li a:focus {
+  text-decoration: underline;
+}
+
+.razdelitel {
+  position: relative;
+  top: 3px;
+
+  display: block;
+
+  width: 1px;
+  height: 20px;
+
+  border-left: #d9d9d9 solid 1px;
+
+  line-height: 40px;
+}
+
+/*=== ГЛАВНОЕ МЕНЮ КОНЕЦ ===*/
+
+/*=== ШАПКА ===*/
+
+/*.head{
+	padding:10px 0 0 0;
+}*/
+
+.head {
+  position: fixed;
+  z-index: 100000;
+  top: 41px;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0 0 0;
+}
+
+.head.scrolling {
+  top: 0;
+
+  padding-top: 5px;
+
+  border-bottom: #bebebe solid 1px;
+  background: #FFFFFF;
+}
+
+.head.scrolling .cols {
+  margin-bottom: 5px;
+}
+
+.Logo_block {
+  margin-top: 2px;
+}
+
+.Logo_block .logo {
+  width: 155px;
+  height: 34px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -450px -348px;
+}
+
+.Logo_block p {
+  display: none;
+
+  letter-spacing: 0.4px;
+
+  color: #505050;
+
+  font: 15px/23px 'BebasNeueBook', Trebuchet MS, sans-serif;
+}
+
+.Phone_block {
+  padding: 0;
+}
+
+.head.scrolling .Phone_block {
+  padding-top: 4px;
+
+  text-align: center;
+}
+
+.Phone_block p {
+  display: inline-block;
+
+  letter-spacing: 0.4px;
+
+  color: #505050;
+
+  font: 24px/36px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Phone_block a,
+.order_choice,
+#Send {
+  display: inline-block;
+
+  height: 36px;
+  margin-left: 5px;
+  padding: 0 10px;
+
+  text-decoration: none;
+  letter-spacing: 0.4px;
+
+  color: #bebebe;
+  border: #bebebe solid 2px;
+  border-radius: 5px;
+
+  font: 24px/34px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Phone_block a:hover,
+.Phone_block a:focus {
+  color: #cf2c4b;
+  border: #cf2c4b solid 2px;
+}
+
+.Search_block {
+  width: 100%;
+  max-width: 254px;
+  margin-top: 5px;
+}
+
+#Search_Form {
+  position: relative;
+
+  width: 100%;
+}
+
+.Search_block input {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+
+  color: #bebebe;
+  border: #bebebe solid 3px;
+  border-radius: 5px;
+
+  font: 24px/32px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Search_block button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: block;
+
+  width: 50px;
+  height: 38px;
+
+  cursor: pointer;
+
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #cf2c4b;
+
+  -moz-border-top-right-radius: 5px;
+  -moz-border-bottom-right-radius: 5px;
+}
+
+.search_icon {
+  width: 28px;
+  height: 27px;
+  margin: 0px 0 0 11px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -107px 0px;
+}
+
+.search_message {
+  position: absolute;
+  top: calc(100%+2px);
+  left: 20px;
+
+  display: inline-block;
+
+  height: 30px;
+  padding: 0 15px;
+
+  text-align: center;
+
+  color: #FFFFFF;
+  border-radius: 5px;
+  background: #cf2c4b;
+
+  font: 16px/30px Verdana, Geneva, sans-serif;
+}
+
+.search_message:before {
+  position: absolute;
+  top: -5px;
+  left: -7px;
+
+  width: 0;
+  height: 0;
+
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  border-top: 7px solid transparent;
+  border-right: 14px solid #cf2c4b;
+  border-bottom: 7px solid transparent;
+}
+
+.Cart_block {
+  float: right;
+}
+
+.Cart_block a {
+  display: block;
+}
+
+.cart_header {
+  display: none;
+
+  letter-spacing: 0.4px;
+
+  color: #505050;
+
+  font: 24px/36px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.cart_icon {
+  position: relative;
+  top: 5px;
+
+  display: inline-block;
+
+  width: 46px;
+  height: 27px;
+  margin: 0 10px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat 0px 0px;
+}
+
+.cart_count {
+  display: inline-block;
+
+  height: 36px;
+  padding: 0 10px;
+
+  text-decoration: none;
+  letter-spacing: 0.4px;
+
+  color: #cf2c4b;
+  border: #bebebe solid 2px;
+  border-radius: 5px;
+
+  font: 24px/34px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.cart_summ {
+  position: relative;
+
+  display: none;
+
+  margin-top: 6px;
+
+  text-align: right;
+
+  color: #cf2c4b;
+
+  font: 24px/36px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.head.scrolling .Logo_block,
+.head.scrolling .Search_block,
+.head.scrolling .Cart_block .cart_header,
+.head.scrolling .Cart_block .cart_summ {
+  display: none;
+}
+
+/*=== ШАПКА КОНЕЦ ===*/
+
+/*=== КАТАЛОГ МЕНЮ ===*/
+
+.catalog_menu {
+  height: 40px;
+  margin-top: -3px;
+
+  background: #505050;
+}
+
+.catalog_menu .cols {
+  margin-bottom: 0;
+}
+
+.catalog_menu ul {
+  height: 40px;
+}
+
+.catalog_menu ul li {
+  display: inline-block;
+
+  list-style: none;
+}
+
+.catalog_menu ul li a {
+  display: inline-block;
+
+  height: 40px;
+  padding: 0 10px;
+
+  text-decoration: none;
+  letter-spacing: 0.7px;
+
+  color: #ffffff;
+
+  font: 24px/40px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.catalog_menu ul li a:hover,
+.catalog_menu ul li a:focus,
+.catalog_menu ul li a.active {
+  background: #303030;
+}
+
+/*=== КАТАЛОГ МЕНЮ КОНЕЦ ===*/
+
+/*=== ГЛАВНЫЙ БАННЕР ===*/
+
+.main_banner {
+  display: block;
+  overflow: hidden;
+
+  width: 100%;
+  height: 350px;
+
+  background: url(../../../../../img/ban_1.jpg) repeat-x left top;
+  background-size: cover;
+}
+
+.ban {
+  text-decoration: none;
+}
+
+.ban_image11 {
+  display: block;
+
+  width: 254px;
+  height: 224px;
+  margin: 63px auto 0;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -322px 0px;
+}
+
+.ban_image12 {
+  display: block;
+
+  width: 322px;
+  height: 337px;
+  margin: 13px auto 0;
+
+  background: url(../../../../../img/Sprite.png) no-repeat 0px -27px;
+}
+
+.ban_image13 {
+  margin-top: 100px;
+}
+
+.ban_image13_1 {
+  display: block;
+
+  width: 254px;
+  height: 79px;
+  margin: 0 auto;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -322px -224px;
+}
+
+.ban_image13 p {
+  text-align: center;
+
+  color: #cf2c4b;
+
+  font: 62px/72px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+/*=== ГЛАВНЫЙ КОНЕЦ ===*/
+
+/*=== ДОПОЛНИТЕЛЬНЫЕ БАННЕРЫ ===*/
+
+.additional_banners {
+  margin-top: 20px;
+}
+
+.miniban {
+  display: table;
+
+  width: 100%;
+  height: 140px;
+
+  text-decoration: none;
+
+  border: #d9d9d9 solid 1px;
+}
+
+.miniban:hover,
+.miniban:focus {
+  border-color: #cf2c4b;
+}
+
+.miniban .miniban_firsttd {
+  display: table-cell;
+
+  width: 150px;
+
+  vertical-align: middle;
+}
+
+.miniban .miniban_secondtd {
+  display: table-cell;
+
+  padding: 10px 10px 0;
+}
+
+.miniban .miniban_secondtd p {
+  text-align: center;
+}
+
+.miniban_secondtd .h {
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
+
+  color: #505050;
+
+  font: 36px/40px 'Helios', Verdana, sans-serif;
+  /*text-shadow:0 0 0.3px #202020;*/
+}
+
+.miniban_secondtd .h span {
+  color: #cf2c4b;
+}
+
+.miniban_secondtd .text {
+  margin-top: 10px;
+
+  color: #303030;
+
+  font: 18px/27px Verdana, Geneva, sans-serif;
+}
+
+.miniban .guarantee {
+  width: 122px;
+  height: 122px;
+  margin: 0 auto;
+
+  background: url(../../../../../img/Sprite.png) no-repeat 0px -365px;
+}
+
+.miniban .delivery {
+  width: 122px;
+  height: 122px;
+  margin: 0 auto;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -122px -365px;
+}
+
+/*=== ДОПОЛНИТЕЛЬНЫЕ БАННЕРЫ КОНЕЦ ===*/
+
+/*=== ХЛЕБНЫЕ КРОШКИ ===*/
+
+.breadcrumbs {
+  margin-bottom: 20px;
+
+  border-bottom: #d9d9d9 1px solid;
+  background: #ffffff;
+}
+
+.breadcrumbs .cols {
+  margin-bottom: 0;
+}
+
+.breadcrumbs a {
+  position: relative;
+
+  display: inline-block;
+
+  height: 40px;
+  padding: 0 65px 0 45px;
+
+  vertical-align: top;
+  text-decoration: none;
+
+  color: #505050;
+  background: #fff;
+
+  font: 20px/40px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+  /*border:#505050 solid 1px;*/
+}
+
+.breadcrumbs a:nth-child(odd) {
+  background: #f5f5f5;
+}
+
+.breadcrumbs a:nth-child(odd) .skos {
+  border-left-color: #f5f5f5;
+  background: #ffffff;
+}
+
+.breadcrumbs a:nth-child(even) {
+  background: #ffffff;
+}
+
+.breadcrumbs a:nth-child(even) .skos {
+  border-left-color: #ffffff;
+  background: #f5f5f5;
+}
+
+/*.breadcrumbs a:nth-child(3){
+	background-color: #d9d9d9;
+}
+.breadcrumbs a:nth-child(3) .skos{
+	border-left-color:#d9d9d9;
+	background-color:#f5f5f5;
+}*/
+
+.breadcrumbs .skos {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: inline-block;
+
+  box-sizing: content-box;
+  width: 0;
+  height: 0;
+
+  vertical-align: top;
+
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid;
+}
+
+#trapezoid {
+  box-sizing: content-box;
+  width: 100px;
+  height: 0;
+
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid red;
+  border-left: 50px solid transparent;
+}
+
+.breadcrumbs a[href]:hover,
+.breadcrumbs a[href]:focus {
+  text-decoration: underline;
+}
+
+/*=== ХЛЕБНЫЕ КРОШКИ КОНЕЦ ===*/
+
+/*=== ТОВАРЫ В КАТАЛОГЕ ===*/
+
+.catalog .header_h {
+  margin: 15px 0;
+
+  line-height: 48px;
+}
+
+.colsfiltr {
+  display: table-cell;
+
+  width: 256px;
+  margin-bottom: 10px;
+  padding: 0 6px;
+
+  vertical-align: top;
+}
+
+.filtr_h {
+  /*font-family:'BebasNeueBold', Trebuchet MS, sans-serif;
+	letter-spacing:0.4px;*/
+  margin: 0 0 10px 0;
+  padding: 0 10px;
+
+  font: bold 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.colsproducts {
+  position: relative;
+
+  display: table-cell;
+
+  vertical-align: top;
+}
+
+.colsfiltr section {
+  margin-bottom: 10px;
+  padding: 10px 0;
+
+  border-bottom: #d9d9d9 solid 1px;
+}
+
+.colsfiltr section.Filtr_brand div {
+  overflow: auto;
+  /*border-top:#F00 solid 1px;*/
+
+  max-height: 300px;
+}
+
+.colsfiltr section.Filtr_sort {
+  padding: 0 0 10px;
+}
+
+.colsfiltr section.Filtr_sort .jq-selectbox {
+  margin-left: 10px;
+}
+
+.colsfiltr a {
+  display: block;
+
+  margin-bottom: 5px;
+  padding: 5px 10px;
+
+  text-align: left;
+  text-decoration: none;
+
+  color: #505050;
+
+  font: 12px Verdana, Geneva, sans-serif;
+}
+
+.colsfiltr a:hover,
+.colsfiltr a:focus {
+  text-decoration: underline;
+
+  background: #F7F7F7;
+}
+
+.showhide {
+  float: left;
+
+  height: 48px;
+  padding: 4px 0;
+}
+
+.show_filtr {
+  text-decoration: none;
+}
+
+.colsfiltr a.active {
+  background: #d9d9d9;
+}
+
+.hide_filtr,
+.show_filtr {
+  display: inline-block;
+
+  height: 40px;
+  padding: 0 10px;
+
+  text-decoration: none;
+
+  color: #cf2c4b;
+
+  font: 18px/40px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.hide_filtr .icon,
+.show_filtr .icon {
+  float: left;
+
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.hide_filtr .icon {
+  background: url(../../../../../img/Sprite.png) no-repeat -362px -303px;
+}
+
+.show_filtr .icon {
+  background: url(../../../../../img/Sprite.png) no-repeat -322px -303px;
+}
+
+
+
+.Filtr_type > div,
+.Filtr_price > div {
+  position: relative;
+}
+
+.Filtr_show {
+  position: absolute;
+  z-index: 10000;
+  top: 130%;
+  right: 0;
+
+  padding: 0px;
+
+  border: #cf2c4b solid 1px;
+  border-radius: 5px;
+  background: #cf2c4b;
+}
+
+.Filtr_show:before {
+  position: absolute;
+  top: -6px;
+  left: -8px;
+
+  width: 0;
+  height: 0;
+
+  content: " ";
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+
+  border-top: 7px solid transparent;
+  border-right: 14px solid #cf2c4b;
+  border-bottom: 7px solid transparent;
+}
+
+.colsfiltr a.Filtr_button {
+  display: inline-block;
+
+  height: 35px;
+  margin-bottom: 0;
+  padding: 0 10px;
+
+  text-decoration: none;
+
+  color: #FFF;
+  border: #cf2c4b solid 1px;
+  border-radius: 5px;
+  background: #cf2c4b;
+
+  font: 16px/35px Verdana, Geneva, sans-serif;
+}
+
+/*.colsfiltr a.Filtr_button:hover{
+	background-color:#FFF;
+	color:#505050;
+}*/
+
+.colsfiltr .checkbox {
+  margin-bottom: 10px;
+  padding: 0 10px;
+
+  text-align: left;
+}
+
+.colsfiltr input[checkbox] {
+  margin-right: 10px;
+}
+
+.colsfiltr label {
+  margin-left: 10px;
+
+  font: 12px Verdana, Geneva, sans-serif;
+}
+
+.colsfiltr label.disable {
+  color: #999;
+}
+
+.Filtr_price div:not(.Filtr_show) {
+  height: 30px;
+  margin-left: 10px;
+
+  font: 18px/30px Verdana, Geneva, sans-serif;
+}
+
+.min_price,
+.max_price {
+  width: 80px;
+  height: 30px;
+  padding: 0 0 0 5px;
+
+  border-top: #666666 solid 1px;
+  border-right: #CCCCCC solid 1px;
+  border-bottom: #CCCCCC solid 1px;
+  border-left: #666666 solid 1px;
+  border-radius: 5px;
+
+  font: 18px/30px Verdana, Geneva, sans-serif;
+}
+
+#show_more {
+  display: block;
+
+  height: 35px;
+  margin: 15px 0;
+
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+
+  color: #999;
+  border: #d9d9d9 solid 1px;
+
+  font: 25px/35px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+#show_more:hover,
+#show_more:focus {
+  color: #505050;
+  background: #d9d9d9;
+}
+
+#Up {
+  position: fixed;
+  top: 50%;
+  right: 0;
+
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 0;
+}
+
+#Up a {
+  display: block;
+
+  width: 40px;
+  height: 40px;
+
+  opacity: 0.5;
+  background: url(../../../../../img/Sprite.png) no-repeat -402px -303px;
+}
+
+#Up a:hover,
+#Up a:focus {
+  opacity: 1;
+}
+
+.Object {
+  position: relative;
+
+  display: inline-block;
+
+  width: 240px;
+  padding: 10px 7px;
+
+  vertical-align: top;
+
+  border: #d9d9d9 solid 1px;
+}
+
+.Object .name {
+  display: block;
+  /*font-family:'Helios', Verdana, sans-serif;*/
+  /*letter-spacing:0.5px;*/
+
+  min-height: 42px;
+
+  text-decoration: none;
+
+  color: #303030;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.Object .name span {
+  font-size: 12px;
+}
+
+.Object .type {
+  /*letter-spacing:0.5px;*/
+  color: #505050;
+
+  font: 12px/18px Verdana, Geneva, sans-serif;
+}
+
+.Object .price {
+  position: relative;
+
+  display: inline-block;
+
+  height: 45px;
+  margin-top: 10px;
+  padding: 0 5px;
+}
+
+.price .cena {
+  text-align: center;
+
+  color: #505050;
+
+  font: 30px/45px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.price .old_price {
+  position: absolute;
+  top: -15px;
+  right: -50px;
+
+  display: inline-block;
+}
+
+.old_price p {
+  text-align: left;
+
+  color: #505050;
+
+  font: 18px/27px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.crossing {
+  position: absolute;
+  top: 1px;
+  left: -3px;
+
+  width: 61px;
+  height: 23px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -46px 0px;
+}
+
+.button_block {
+  display: block;
+}
+
+.to_cart {
+  display: inline-block;
+
+  height: 40px;
+  padding: 0 12px;
+
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.7px;
+
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background: #505050;
+
+  font: 30px/40px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.to_cart:hover,
+.to_cart:focus {
+  background: #cf2c4b;
+}
+
+.to_cart:disabled {
+  color: #505050;
+  background: #d9d9d9;
+}
+
+/*=== ТОВАРЫ В КАТАЛОГЕ КОНЕЦ ===*/
+
+/*=== БЛОК КАТАЛОГА ===*/
+
+.foot_catalog_block {
+  margin: 5px 0 10px 0;
+
+  border-bottom: #cf2c4b solid 1px;
+}
+
+.foot_catalog_block .cols {
+  margin-bottom: 0;
+}
+
+.all_catalog_block {
+  display: inline-block;
+  float: right;
+
+  height: 40px;
+  padding: 0 12px;
+
+  text-decoration: none;
+
+  color: #ffffff;
+  background: #cf2c4b;
+
+  font: 24px/40px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+/*=== БЛОК КАТАЛОГА КОНЕЦ ===*/
+
+/*=== БЛОК ТОВАРА ===*/
+
+.product .header_h span {
+  color: #cf2c4b;
+
+  font-family: 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.product .sub_header {
+  /*font-family:'BebasNeueRegular', Trebuchet MS, sans-serif;*/
+  margin: -10px 0 15px 0;
+
+  text-align: center;
+
+  font: 16px/24px Verdana, Geneva, sans-serif;
+}
+
+.product_img {
+  padding: 10px;
+
+  border: #d9d9d9 solid 1px;
+}
+
+.min_img {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding: 5px;
+  /*border:#d9d9d9 solid 1px;*/
+}
+
+.product_row {
+  display: block;
+
+  height: 60px;
+  padding: 10px 0;
+
+  border-bottom: #d9d9d9 dotted 1px;
+  /*margin-bottom:10px;*/
+
+  line-height: 40px;
+}
+
+.product p {
+  display: inline-block;
+
+  color: #505050;
+
+  font: 20px/45px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+#comment_bubble {
+  position: relative;
+
+  width: 140px;
+  height: 100px;
+
+  border-radius: 12px;
+  background: #088cb7;
+}
+
+#comment_bubble:before {
+  position: absolute;
+  top: 38px;
+  right: 100%;
+
+  width: 0;
+  height: 0;
+
+  content: '';
+
+  border-top: 13px solid transparent;
+  border-right: 26px solid #088cb7;
+  border-bottom: 13px solid transparent;
+}
+
+.product .product_info {
+  /*border:#cf2c4b solid 2px;*/
+  position: relative;
+
+  display: table;
+  float: right;
+
+  width: 100%;
+  height: auto;
+  padding: 10px 10px 20px 10px;
+
+  border-radius: 15px;
+  background: #F3F3F3;
+}
+
+.product .product_info:before {
+  position: absolute;
+  top: 33px;
+  left: -26px;
+
+  width: 0;
+  height: 0;
+
+  content: '';
+
+  border-top: 13px solid transparent;
+  border-right: 26px solid #F3F3F3;
+  border-bottom: 13px solid transparent;
+  /*transform:rotate(-45deg);*/
+}
+
+.product_info_row {
+  display: table-row;
+}
+
+.product_info_row div {
+  display: table-cell;
+
+  height: 20px;
+
+  border-bottom: #303030 dotted 1px;
+}
+
+.product_info_row .key {
+  text-align: left;
+}
+
+.product_info_row .value {
+  text-align: right;
+}
+
+.product .product_info p,
+.rating p {
+  position: relative;
+  top: 4px;
+
+  display: inline-block;
+
+  padding: 0 10px;
+  /*letter-spacing:0.5px;*/
+
+  color: #303030;
+  background: #F3F3F3;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.rating p {
+  top: 0;
+
+  background: #ffffff;
+}
+
+.product .rating {
+  padding: 50px 0;
+}
+
+.product .rating img {
+  position: relative;
+  top: 8px;
+}
+
+.product_row > * {
+  float: left;
+
+  margin-right: 20px;
+}
+
+.product p.sale {
+  display: inline-block;
+
+  margin-right: 0;
+
+  color: #505050;
+
+  font: 20px/45px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.product p.sale span {
+  margin: 0 5px;
+
+  color: #cf2c4b;
+
+  font-size: 30px;
+}
+
+.product p:not(.cena) {
+  padding: 0 10px;
+}
+
+.product .price {
+  position: relative;
+
+  display: inline-block;
+
+  height: 40px;
+  margin: 0 20px 0 0;
+  padding: 0 10px;
+}
+
+.product .cena {
+  text-align: center;
+
+  color: #505050;
+
+  font: 20px/45px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.product .cena span {
+  margin: 0 5px;
+
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.product .old_price {
+  position: absolute;
+  top: -15px;
+  right: -20px;
+
+  display: inline-block;
+}
+
+.old_price p {
+  text-align: left;
+
+  color: #505050;
+
+  font: 18px/27px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.product .crossing {
+  position: absolute;
+  top: 1px;
+  left: 6px;
+
+  width: 61px;
+  height: 23px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -46px 0px;
+}
+
+.product .button_block {
+  display: inline-block;
+
+  height: 40px;
+}
+
+#count_pr,
+.count_pr {
+  position: relative;
+  top: 0px;
+
+  width: 60px;
+  height: 40px;
+  margin: 0 20px 0 20px;
+  padding: 0 0 0 10px;
+
+  color: #505050;
+  border: #d9d9d9 solid 1px;
+  border-radius: 5px;
+
+  font: 30px/40px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.count_pr {
+  margin: 0;
+}
+
+.product .button_block {
+  padding: 0 10px;
+}
+
+.product .to_cart {
+  display: inline-block;
+
+  height: 40px;
+  padding: 0 25px;
+
+  cursor: pointer;
+  text-align: center;
+  letter-spacing: 0.7px;
+
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  background: #505050;
+
+  font: 30px/40px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.product .to_cart:hover,
+.product .to_cart:focus {
+  background: #cf2c4b;
+}
+
+.product .to_cart:disabled {
+  color: #505050;
+  background: #d9d9d9;
+}
+
+.row_adw {
+  position: relative;
+  left: 0;
+
+  height: auto;
+  margin: 15px 0 50px 0;
+}
+
+.go_left,
+.go_right {
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+
+  opacity: 0.5;
+}
+
+.go_left {
+  left: -40px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -362px -303px;
+}
+
+.go_right {
+  right: -40px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -322px -303px;
+}
+
+.go_left:hover,
+.go_left:focus,
+.go_right:hover,
+.go_right:focus {
+  opacity: 1;
+}
+
+/*=== БЛОК ТОВАРА КОНЕЦ ===*/
+
+/*======Табс Блок - КАРТОЧКА ТОВАРА===*/
+
+.section {
+  clear: both;
+
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section p {
+  padding: 10px 15px;
+
+  text-align: left;
+
+  font-size: 14px;
+  line-height: 20px;
+}
+
+ul.tabs {
+  height: 35px;
+
+  list-style: none;
+
+  border-bottom: 1px solid #d9d9d9;
+
+  line-height: 35px;
+}
+
+.tabs li {
+  position: relative;
+  position: relative;
+  z-index: 1;
+  bottom: 1px;
+
+  display: inline;
+  float: left;
+
+  margin: 0 10px 1px 0;
+  padding: 0 20px 0px;
+
+  cursor: pointer;
+
+  color: #000;
+  border: 1px solid #d9d9d9;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: url(../../../../../img/back_side_menu_2.jpg) repeat-x;
+
+  font-size: 16px;
+
+  -webkit-top-left-border-radius: 5px;
+  -webkit-top-right-border-radius: 5px;
+  -moz-border-top-left-radius: 5px;
+  -moz-border-top-right-radius: 5px;
+}
+
+.tabs li.current {
+  padding: 0 20px 0px;
+
+  color: #000;
+  border: 1px solid #d9d9d9;
+  border-bottom: none;
+  background: #fff;
+}
+
+.tabs li:first-child {
+  margin-left: 0px;
+}
+
+.box {
+  display: none;
+
+  padding: 30px 15px;
+
+  border: 1px solid #d9d9d9;
+  border-width: 0 1px 1px;
+  background: #FFFFFF;
+}
+
+.box.visible {
+  z-index: 100;
+
+  display: block;
+}
+
+.box p {
+  padding: 5px 0;
+}
+
+.box ul,
+box ol {
+  padding: 0 0 0 0px;
+}
+
+.box li {
+  list-style: none;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.box img {
+  display: inline-block;
+}
+
+.box .CapchaBl img {
+  float: left;
+}
+
+.add {
+  display: block;
+
+  width: 100px;
+  height: 30px;
+  margin: 10px;
+  padding: 0 5px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #000000;
+  border-radius: 15px;
+
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.add:hover {
+  text-decoration: underline;
+
+  background: #E2E2E2;
+  box-shadow: 0px 0px 10px #333;
+}
+
+/*===///Табс Блок - КАРТОЧКА ТОВАРА===*/
+
+/*======Комментарии, Отзывы===*/
+
+.CommentsBlock {
+  display: inline-block;
+
+  padding: 20px;
+}
+
+p.CommHeader {
+  margin-bottom: 15px;
+
+  letter-spacing: 0.5px;
+
+  font: 22px 'Times New Roman', Times, serif;
+}
+
+#CommentForm,
+#FormAsk {
+  width: 350px;
+  margin: 0 0 20px 0;
+  padding-left: 20px;
+}
+
+#CommentForm .hh,
+#FormAsk .hh {
+  letter-spacing: 0.5px;
+
+  font: 22px 'Times New Roman', Times, serif;
+}
+
+#CommentForm p,
+#FormAsk p {
+  margin: 10px 0 0 0;
+}
+
+.Comment {
+  display: block;
+
+  margin-bottom: 10px;
+
+  border-bottom: #368DD0 dashed 1px;
+}
+
+.Comment p {
+  margin-bottom: 5px;
+}
+
+.Comment .info {
+  margin-top: -15px;
+
+  color: #999;
+}
+
+.Comment .name {
+  float: left;
+
+  margin-right: 30px;
+
+  text-decoration: underline;
+
+  color: #0080E1;
+}
+
+.rating {
+  position: relative;
+  top: 5px;
+
+  display: block;
+
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.rating img {
+  display: inline-block;
+}
+
+#minus,
+#plus {
+  position: relative;
+  top: 5px;
+
+  cursor: pointer;
+}
+
+#minus {
+  float: left;
+
+  margin-right: 10px;
+}
+
+#plus {
+  margin-left: 10px;
+}
+
+#rating {
+  float: left;
+
+  width: 100px;
+}
+
+.CapchaBl {
+  overflow: hidden;
+
+  width: 136px;
+  height: 44px;
+  margin: 30px 0 -10px 0;
+  padding: 7px;
+
+  border: #CCC solid 1px;
+  border-radius: 3px;
+}
+
+.Wbutton {
+  display: inline-block;
+
+  height: 30px;
+  padding: 0 10px;
+
+  letter-spacing: 0.5px;
+
+  color: #FFF;
+  border: #000 solid 1px;
+  border-radius: 5px;
+  background: #124578;
+
+  font: 16px "Times New Roman", Times, serif;
+}
+
+.Wbutton:hover {
+  box-shadow: 2px 2px 4px #666;
+}
+
+.More {
+  color: #0080E1;
+
+  font-size: 14px;
+}
+
+/*===///Комментарии, Отзывы===*/
+
+/*=== БЛОК ТЕКСТА ===*/
+
+.Text {
+  margin: 30px 0;
+}
+
+.Cat_Text {
+  margin: 15px 0 0 0;
+  padding: 50px 0 30px 0;
+
+  border-top: #cf2c4b solid 1px;
+}
+
+.header_h {
+  margin: 15px 0;
+
+  text-align: center;
+
+  color: #505050;
+
+  font: normal 48px/60px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.header_h span {
+  color: #cf2c4b;
+
+  font-family: 'BebasNeueBook', Trebuchet MS, sans-serif;
+}
+
+.Text p,
+.Cat_Text p {
+  margin-bottom: 15px;
+  /*font-family:'Helios', Verdana, sans-serif;*/
+  /*letter-spacing:0.5px;*/
+
+  color: #303030;
+
+  font: 15px/21px Verdana, Geneva, sans-serif;
+}
+
+/*=== БЛОК ТЕКСТА КОНЕЦ ===*/
+
+.Articles_Object {
+  width: 300px;
+  height: 300px;
+}
+
+.Articles_Object a {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  width: 300px;
+  height: 300px;
+
+  text-decoration: none;
+}
+
+.Articles_Object a:hover .Articles_name,
+.Articles_Object a:focus .Articles_name {
+  opacity: 0.3;
+}
+
+.Articles_name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 300px;
+  padding: 10px;
+
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+
+  background: rgba(0,0,0,0.8);
+}
+
+.Articles_name p {
+  text-align: left;
+  /*font-family:'Helios', Verdana, sans-serif;*/
+
+  color: #ffffff;
+
+  font: 18px/27px Verdana, Geneva, sans-serif;
+  /*letter-spacing:0.4px;*/
+}
+
+/*=== КОРЗИНА ===*/
+
+.cart {
+  margin: -20px 0 50px 0;
+}
+
+.detalization {
+  display: inline-block;
+
+  margin: 15px 0;
+
+  text-align: left;
+  text-decoration: none;
+
+  color: #cf2c4b;
+  border-bottom: #cf2c4b dotted 1px;
+
+  font: 16px/16px Verdana, Geneva, sans-serif;
+}
+
+#product_list {
+  display: none;
+}
+
+.head_cart_table {
+  margin-bottom: 10px;
+
+  border-bottom: #505050 solid 1px;
+}
+
+
+
+.footer_cart_table {
+  margin-bottom: 10px;
+  padding-top: 10px;
+
+  border-top: #505050 solid 1px;
+}
+
+.product_item {
+  margin-bottom: 10px;
+
+  border-bottom: #d9d9d9 dotted 1px;
+}
+
+.product_item:last-child {
+  border: none;
+}
+
+.product_item p {
+  color: #505050;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.product_item a.name {
+  display: block;
+
+  padding: 0;
+
+  text-align: left;
+  text-decoration: none;
+
+  color: #00598c;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.product_item a.name:hover,
+.product_item a.name:focus {
+  text-decoration: underline;
+}
+
+.product_item p.check_style,
+.check_style {
+  letter-spacing: 0.4px;
+
+  color: #505050;
+
+  font: 20px/45px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+.product_item p.check_style span,
+.check_style span {
+  font-size: 30px;
+  line-height: 45px;
+}
+
+.product_item p.type {
+  text-align: left;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.product_item p.check_style span.krest {
+  position: relative;
+  top: 0px;
+
+  margin: 0 10px;
+
+  color: #cf2c4b;
+
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+.delete {
+  margin-left: 10px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: #cf2c4b;
+
+  font: bold 40px/45px Verdana, Geneva, sans-serif;
+}
+
+.order_choice,
+#Send {
+  color: #505050;
+  border-color: #505050;
+}
+
+#Send,
+#steps {
+  margin: 0;
+}
+
+.order_choice:hover,
+#Send:hover {
+  color: #ffffff;
+  background: #505050;
+}
+
+/*=== КОРЗИНА КОНЕЦ ===*/
+
+/*=== ОФОРМЛЕНИЕ ЗАКАЗА ===*/
+
+.order_block {
+  margin: -20px 0 50px 0;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+.order_block input,
+.order_block textarea {
+  display: block;
+}
+
+#Order_form div {
+  margin: 0 0 10px 0;
+
+  text-align: left;
+}
+
+#Order_form div label span,
+#Order_form p span {
+  color: #cf2c4b;
+
+  font-weight: bold;
+}
+
+#delivery-styler,
+#delivery-styler > *,
+#paym-styler,
+#paym-styler > * {
+  margin-bottom: 0 !important;
+}
+
+.city div {
+  z-index: 1000;
+}
+
+#Order_form p {
+  color: #505050;
+
+  font: 14px/21px Verdana, Geneva, sans-serif;
+}
+
+#Order_form p.GroupH {
+  letter-spacing: 0.4px;
+
+  color: #505050;
+
+  font: 30px/45px 'BebasNeueBold', Trebuchet MS, sans-serif;
+}
+
+#delivery-styler.focused > .jq-selectbox__select,
+#paym-styler.focused > .jq-selectbox__select {
+  border: #38B85F solid 1px !important;
+}
+
+.errorField {
+  border: #D8181E solid 1px !important;
+}
+
+/*=== ОФОРМЛЕНИЕ ЗАКАЗА КОНЕЦ ===*/
+
+/*=== СПАСИБО ЗА ПОКУПКУ ===*/
+
+#modal_shape {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+#message_block {
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  display: table;
+
+  width: 220px;
+  height: 120px;
+  margin: -60px 0 0 -110px;
+
+  border: #505050 solid 4px;
+  border-radius: 10px;
+  background: rgba(255,255,255,1);
+  box-shadow: 0 0 10px #000000;
+}
+
+#Loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0 -20px;
+}
+
+#message {
+  display: table-cell;
+
+  padding: 10px;
+
+  text-align: center;
+  vertical-align: middle;
+
+  color: #505050;
+
+  font: 16px/24px Verdana, Geneva, sans-serif;
+}
+
+#closebtn {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+
+  width: 50px;
+  height: 50px;
+}
+
+/*=== СПАСИБО ЗА ПОКУПКУ КОНЕЦ ===*/
+
+/*=== ФУТЕР ===*/
+
+footer {
+  position: relative;
+
+  clear: both;
+
+  height: 230px;
+  margin: -230px 0 0 0;
+  padding: 20px 0;
+
+  background: #505050;
+}
+
+.foot_logo {
+  display: block;
+
+  width: 206px;
+  height: 45px;
+
+  background: url(../../../../../img/Sprite.png) no-repeat -244px -426px;
+}
+
+.foot_descript {
+  margin: 10px 0 0 0;
+  padding-right: 10px;
+}
+
+.foot_descript p {
+  color: #d9d9d9;
+
+  font: 12px/18px Verdana, Geneva, sans-serif;
+}
+
+.foot_h {
+  color: #d9d9d9;
+
+  font: 24px/30px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.foot_nav {
+  margin-top: 15px;
+}
+
+.foot_nav li {
+  list-style: none;
+  /*margin-bottom:10px;*/
+}
+
+.foot_nav li a {
+  display: block;
+
+  height: 25px;
+
+  text-decoration: none;
+
+  color: #d9d9d9;
+
+  font: 12px/25px Verdana, Geneva, sans-serif;
+}
+
+.foot_nav li a:hover,
+.foot_nav li a:focus {
+  background: #303030;
+}
+
+.foot_p {
+  padding: 0 10px;
+}
+
+.subscribe {
+  width: 100%;
+  margin-top: 15px;
+}
+
+#subscribe {
+  position: relative;
+
+  width: 100%;
+}
+
+#subscribe input {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+
+  color: #bebebe;
+  border: #bebebe solid 3px;
+  border-radius: 5px;
+  background: inherit;
+
+  font: 24px/32px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+#subscribe button {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: inline-block;
+
+  height: 38px;
+  padding: 0 12px;
+
+  cursor: pointer;
+  letter-spacing: 0.4px;
+
+  color: #ffffff;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #cf2c4b;
+
+  font: 24px/38px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+
+  -moz-border-top-right-radius: 5px;
+  -moz-border-bottom-right-radius: 5px;
+}
+
+/*=== ФУТЕР КОНЕЦ ===*/
+
+/*=== ПОСТРАНИЧНАЯ НАВИГАЦИЯ ===*/
+
+.Page_navigation {
+  margin: 10px 0 20px 0;
+
+  line-height: 40px;
+}
+
+.Page_navigation p {
+  margin: 10px 0;
+
+  text-align: center;
+
+  font: 28px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Page_navigation span {
+  position: relative;
+  bottom: -9px;
+
+  text-align: center;
+
+  color: #999;
+
+  font: 40px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Page_navigation a {
+  display: inline-block;
+
+  width: 40px;
+  height: 40px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #999;
+  border-radius: 5px;
+  box-shadow: inset 0 0 5px #999;
+
+  font: 25px/40px 'BebasNeueRegular', Trebuchet MS, sans-serif;
+}
+
+.Page_navigation a:hover {
+  color: #000;
+  text-shadow: 0 0 1px #999;
+}
+
+.Page_navigation a.this {
+  width: 40px;
+  height: 40px;
+
+  color: #000;
+  background: #FFF;
+  box-shadow: inset 0 0 5px #999;
+  text-shadow: 0 0 1px #999;
+
+  font-weight: bold;
+  line-height: 40px;
+}
+
+/* КОНЕЦ - ПОСТРАНИЧНАЯ НАВИГАЦИЯ */
+
+@media only screen and (min-width:800px) {
+  .cols.col-1 {
+    width: 8.3333333%;
+  }
+
+  .cols.col-2 {
+    width: 16.6666666%;
+  }
+
+  .cols.col-3 {
+    width: 25%;
+  }
+
+  .cols.col-4 {
+    width: 33.3333333%;
+  }
+
+  .cols.col-5 {
+    width: 41.6666666%;
+  }
+
+  .cols.col-6 {
+    width: 50%;
+  }
+
+  .cols.col-7 {
+    width: 58.3333333%;
+  }
+
+  .cols.col-8 {
+    width: 66.6666666%;
+  }
+
+  .cols.col-9 {
+    width: 75%;
+  }
+
+  .cols.col-10 {
+    width: 83.3333333%;
+  }
+
+  .cols.col-11 {
+    width: 91.6666666%;
+  }
+
+  .cols.col-12 {
+    width: 100%;
+  }
+
+  .Text p,
+  .Cat_Text p {
+    padding: 0 100px;
+  }
+}
+
+@media only screen and (min-width:720px) {
+  #callMMenu {
+    display: none;
+  }
+
+  .main_menu {
+    display: block;
+  }
+}
+
+@media only screen and (min-width:800px) {
+  .Logo_block .logo {
+    width: 206px;
+    height: 45px;
+
+    background: url(../../../../../img/Sprite.png) no-repeat -450px -303px;
+  }
+
+  .Logo_block p {
+    display: block;
+  }
+
+  .cart_header {
+    display: inline-block;
+  }
+
+  .cart_summ {
+    display: block;
+  }
+}

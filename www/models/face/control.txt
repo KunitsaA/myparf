@@ -1,0 +1,1 @@
+a:6:{s:4:"home";s:23:"/home/parfumis.ru2/www/";s:4:"host";s:12:"parfumis.ru2";s:7:"db_host";s:9:"localhost";s:8:"db_login";s:5:"admin";s:7:"db_pass";s:5:"12345";s:7:"db_name";s:8:"parfumis";}

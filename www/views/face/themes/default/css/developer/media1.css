@@ -1,0 +1,29 @@
+@media only screen and (min-width:720px){
+	
+	#callMMenu{
+		display: none;
+	}
+	.main_menu{
+		display: block;
+	}
+}
+
+@media only screen and (min-width:800px){
+	
+	.Logo_block .logo{
+		width: 206px;
+		height: 45px;
+		background:url(../../../../../img/Sprite.png) no-repeat -450px -303px;
+	}
+	.Logo_block p{
+		display: block;
+	}
+
+	.cart_header{
+		display:inline-block;
+	}
+
+	.cart_summ{
+		display: block;
+	}
+}

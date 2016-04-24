@@ -1,0 +1,32 @@
+#dnwr_ip 192.168.0.101
+php_flag magic_quotes_gpc 0
+php_flag magic_quotes_runtime 0
+
+
+#вос
+RewriteEngine On
+RewriteBase /
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(\d+)-([^/]+)$ index.php?c=Page&id=$1&url=$2 [QSA,L]
+RewriteRule ^(\d+)-([^/]+)/page-(\d+)/$ index.php?c=Page&id=$1&url=$2&page=$3 [QSA,L]
+
+RewriteRule ^(search)/([^/]+)/$ index.php?c=Page&id=7&url=$1&search=$2 [L]
+
+RewriteRule ^cat-(\d+)-([^/]+)/$ index.php?c=Product_Cat&id=$1&url=$2 [QSA,L]
+RewriteRule ^cat-(\d+)-([^/]+)/page-(\d+)/$ index.php?c=Product_Cat&id=$1&url=$2&page=$3 [QSA,L]
+
+RewriteRule ^cat-(\d+)-([^/]+)/brand-(\d+)-([^/]+)/$ index.php?c=Product_Cat&id=$1&url=$2&brand=$3 [QSA,L]
+RewriteRule ^cat-(\d+)-([^/]+)/brand-(\d+)-([^/]+)/page-(\d+)/$ index.php?c=Product_Cat&id=$1&url=$2&brand=$3&page=$5 [QSA,L]
+
+RewriteRule ^cat-(\d+)-([^/]+)/product-(\d+)-([^/]+)/$ index.php?c=Product_Object&id=$3&url=$4 [L]
+
+RewriteRule ^landing/cat/(\d+[0-9,]*\d*)/$ landing.php?cat=$1 [QSA,L]
+RewriteRule ^landing/cat/(\d+)/brand/(\d+)/$ landing.php?cat=$1&brand=$2 [QSA,L]
+RewriteRule ^landing/brand/(\d+)/$ landing.php?brand=$1 [QSA,L]
+RewriteRule ^landing/product/(\d+[0-9,]*\d+)/$ landing.php?product=$1 [QSA,L]
+
+
+
+AddDefaultCharset UTF-8
